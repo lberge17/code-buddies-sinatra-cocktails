@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'json'
 require 'net/http'
 require 'open-uri'
+require 'rack-flash'
 
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
