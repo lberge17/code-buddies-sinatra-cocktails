@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <title>Sinatra Cocktails</title>
+</head>
+<body>
+    
+    <%= yield %>
+    
+    <% if logged_in? %>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Logout">
+        </form>
+    <% end %>
+
+</body>
+</html>
