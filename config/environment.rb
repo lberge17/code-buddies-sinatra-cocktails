@@ -14,4 +14,5 @@ configure :development do
     set :database, "sqlite3:db/#{ENV['SINATRA_ENV']}.db"
 end
 
+require_all 'lib'
 require_all 'app'
