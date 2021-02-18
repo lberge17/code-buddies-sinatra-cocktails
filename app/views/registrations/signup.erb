@@ -1,14 +1,26 @@
-<% if flash.has?(:messages) %>
-    <% flash[:messages].each do |m|%>
-        <p class="font-danger"><%= m %></p>
+<div class="auth-form-container">
+    <% if flash.has?(:messages) %>
+        <% flash[:messages].each do |m|%>
+            <p class="font-danger"><%= m %></p>
+        <% end %>
     <% end %>
-<% end %>
 
-<div>
-    <form action="/signup" method="post">
-        <input type="text" placeholder="name" name="user[name]">
-        <input type="email" placeholder="email" name="user[email]">
-        <input type="password" placeholder="password" name="user[password]">
-        <input type="submit" value="Signup">
+
+    <form action="/signup" method="post" class="auth-form">
+        <div class="form-header">
+            <h3>Create Account<h3>
+        </div>
+        <div class="form-field">
+            <input type="text" placeholder="name" name="user[name]">
+        </div>
+        <div class="form-field">
+            <input type="email" placeholder="email" name="user[email]">
+        </div>
+        <div class="form-field">
+            <input type="password" placeholder="password" name="user[password]">
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="signup">
+        </div>
     </form>
 </div>

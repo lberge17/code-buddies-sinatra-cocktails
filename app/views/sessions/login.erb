@@ -1,9 +1,20 @@
-<% if flash.has?(:message) %>
-    <p class="font-danger"><%= flash[:message] %></p>
-<% end %>
+<div class="auth-form-container">
+    <% if flash.has?(:message) %>
+        <p class="font-danger"><%= flash[:message] %></p>
+    <% end %>
 
-<form action="/login" method="post">
-    <input type="email" placeholder="email" name="user[email]">
-    <input type="password" placeholder="password" name="user[password]">
-    <input type="submit" value="Login">
-</form>
+    <form action="/login" method="post" class="auth-form">
+        <div class="form-header">
+            <h3>Login<h3>
+        </div>
+        <div class="form-field">
+            <input type="email" placeholder="email" name="user[email]">
+        </div>
+        <div class="form-field">
+            <input type="password" placeholder="password" name="user[password]">
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="login">
+        </div>
+    </form>
+</div>

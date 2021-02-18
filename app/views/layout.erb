@@ -7,6 +7,7 @@
     <title>Sinatra Cocktails</title>
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <ul class="nav">
             <li><a href="/" class="icon"><img src="/images/cocktail-icon.png" alt="cocktail icon" class="icon"></a></li>
@@ -14,14 +15,16 @@
             <li><a href="/search" class="nav-link">Search</a></li>
             <% if !logged_in? %>
                 <li><a href="/signup" class="nav-link">Signup</a></li>
-                <li><a href="/login" class="nav-link">Contact</a></li>
+                <li><a href="/login" class="nav-link">Login</a></li>
             <% end %>
         </ul>
     </nav>
     
+    <!-- Main Content -->
     <div class="main">
         <%= yield %>
         
+        <!-- Logout Button -->
         <% if logged_in? %>
             <form action="/logout" method="post">
                 <input type="hidden" name="_method" value="delete">
