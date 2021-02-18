@@ -11,9 +11,10 @@
     <nav>
         <ul class="nav">
             <li><a href="/" class="icon"><img src="/images/cocktail-icon.png" alt="cocktail icon" class="icon"></a></li>
-            <li><a href="/cocktails" class="nav-link">My Cocktails</a></li>
-            <li><a href="/search" class="nav-link">Search</a></li>
-            <% if !logged_in? %>
+            <% if logged_in? %>
+                <li><a href="/cocktails" class="nav-link">My Cocktails</a></li>
+                <li><a href="/search" class="nav-link">Search</a></li>
+            <% else %>
                 <li><a href="/signup" class="nav-link">Signup</a></li>
                 <li><a href="/login" class="nav-link">Login</a></li>
             <% end %>
