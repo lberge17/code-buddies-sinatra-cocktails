@@ -34,7 +34,7 @@ class CocktailsController < ApplicationController
     get '/cocktails/:id' do
         redirect_if_not_logged_in
         set_cocktail
-        :'cocktails/show'
+        erb :'cocktails/show'
     end
 
     get '/cocktails/:id/edit' do
@@ -54,7 +54,7 @@ class CocktailsController < ApplicationController
         end
     end
 
-    delete "/cocktail/:id" do
+    delete "/cocktails/:id" do
         redirect_if_not_logged_in
         set_cocktail
         if @cocktail.user_id == session["user_id"]
