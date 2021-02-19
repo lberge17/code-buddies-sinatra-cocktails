@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
     validates :name, 
         presence: true,
         length: { minimum: 2, maximum: 254 }
+
+    has_many :cocktails
 end
