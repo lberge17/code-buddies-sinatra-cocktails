@@ -40,6 +40,32 @@ a.nav-link {
     font-size: 25px;
 }
 
+.logout-link {
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+    font-family: Garamond, serif;
+    background: #222;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    color: white;
+    font-size: 25px;
+}
+
+.logout-link:hover {
+    background: #222;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.logout-link:focus {
+    outline: none;
+}
+
 img.icon {
     height: 50px;
 }
