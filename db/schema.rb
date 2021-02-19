@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_204654) do
+ActiveRecord::Schema.define(version: 2021_02_19_201906) do
+
+  create_table "cocktails", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.string "glass"
+    t.text "instructions"
+    t.boolean "alcoholic"
+    t.string "image_url"
+    t.index ["user_id"], name: "index_cocktails_on_user_id"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "measurements", force: :cascade do |t|
+    t.integer "cocktail_id"
+    t.integer "ingredient_id"
+    t.string "amount"
+    t.index ["cocktail_id"], name: "index_measurements_on_cocktail_id"
+    t.index ["ingredient_id"], name: "index_measurements_on_ingredient_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
